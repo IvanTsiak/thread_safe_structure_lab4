@@ -42,27 +42,27 @@ void generate_files() {
     const std::vector<double> percentages_b = {0.20, 0.40, 0.60, 0.80, 1.00};
     const std::vector<double> percentages_c = {0.025, 0.050, 0.075, 0.100, 1.00};
 
-    // generateCommandFile("commands_a1.txt", percentages_a, COMMANDS_PER_FILE);
-    // generateCommandFile("commands_a2.txt", percentages_a, COMMANDS_PER_FILE);
-    // generateCommandFile("commands_a3.txt", percentages_a, COMMANDS_PER_FILE);
+    generateCommandFile("commands_a1.txt", percentages_a, COMMANDS_PER_FILE);
+    generateCommandFile("commands_a2.txt", percentages_a, COMMANDS_PER_FILE);
+    generateCommandFile("commands_a3.txt", percentages_a, COMMANDS_PER_FILE);
 
-    // generateCommandFile("commands_b1.txt", percentages_b, COMMANDS_PER_FILE);
-    // generateCommandFile("commands_b2.txt", percentages_b, COMMANDS_PER_FILE);
-    // generateCommandFile("commands_b3.txt", percentages_b, COMMANDS_PER_FILE);
+    generateCommandFile("commands_b1.txt", percentages_b, COMMANDS_PER_FILE);
+    generateCommandFile("commands_b2.txt", percentages_b, COMMANDS_PER_FILE);
+    generateCommandFile("commands_b3.txt", percentages_b, COMMANDS_PER_FILE);
 
-    // generateCommandFile("commands_c1.txt", percentages_c, COMMANDS_PER_FILE);
-    // generateCommandFile("commands_c2.txt", percentages_c, COMMANDS_PER_FILE);
-    // generateCommandFile("commands_c3.txt", percentages_c, COMMANDS_PER_FILE);
-    generateCommandFile("C:/projects/thread_safe_structure_lab4/commands_a1.txt", percentages_a, COMMANDS_PER_FILE);
-    generateCommandFile("C:/projects/thread_safe_structure_lab4/commands_a2.txt", percentages_a, COMMANDS_PER_FILE);
-    generateCommandFile("C:/projects/thread_safe_structure_lab4/commands_a3.txt", percentages_a, COMMANDS_PER_FILE);
+    generateCommandFile("commands_c1.txt", percentages_c, COMMANDS_PER_FILE);
+    generateCommandFile("commands_c2.txt", percentages_c, COMMANDS_PER_FILE);
+    generateCommandFile("commands_c3.txt", percentages_c, COMMANDS_PER_FILE);
+    // generateCommandFile("C:/projects/thread_safe_structure_lab4/commands_a1.txt", percentages_a, COMMANDS_PER_FILE);
+    // generateCommandFile("C:/projects/thread_safe_structure_lab4/commands_a2.txt", percentages_a, COMMANDS_PER_FILE);
+    // generateCommandFile("C:/projects/thread_safe_structure_lab4/commands_a3.txt", percentages_a, COMMANDS_PER_FILE);
 
-    generateCommandFile("C:/projects/thread_safe_structure_lab4/commands_b1.txt", percentages_b, COMMANDS_PER_FILE);
-    generateCommandFile("C:/projects/thread_safe_structure_lab4/commands_b2.txt", percentages_b, COMMANDS_PER_FILE);
-    generateCommandFile("C:/projects/thread_safe_structure_lab4/commands_b3.txt", percentages_b, COMMANDS_PER_FILE);
+    // generateCommandFile("C:/projects/thread_safe_structure_lab4/commands_b1.txt", percentages_b, COMMANDS_PER_FILE);
+    // generateCommandFile("C:/projects/thread_safe_structure_lab4/commands_b2.txt", percentages_b, COMMANDS_PER_FILE);
+    // generateCommandFile("C:/projects/thread_safe_structure_lab4/commands_b3.txt", percentages_b, COMMANDS_PER_FILE);
 
-    generateCommandFile("C:/projects/thread_safe_structure_lab4/commands_c1.txt", percentages_c, COMMANDS_PER_FILE);
-    generateCommandFile("C:/projects/thread_safe_structure_lab4/commands_c2.txt", percentages_c, COMMANDS_PER_FILE);
-    generateCommandFile("C:/projects/thread_safe_structure_lab4/commands_c3.txt", percentages_c, COMMANDS_PER_FILE);
+    // generateCommandFile("C:/projects/thread_safe_structure_lab4/commands_c1.txt", percentages_c, COMMANDS_PER_FILE);
+    // generateCommandFile("C:/projects/thread_safe_structure_lab4/commands_c2.txt", percentages_c, COMMANDS_PER_FILE);
+    // generateCommandFile("C:/projects/thread_safe_structure_lab4/commands_c3.txt", percentages_c, COMMANDS_PER_FILE);
     
 }
