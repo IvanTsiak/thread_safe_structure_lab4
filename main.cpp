@@ -50,25 +50,30 @@ void runScenarioTests(ThreadSafe& structure,
 
 int main() {
     std::cout << std::fixed << std::setprecision(2);
+    try {
+        std::vector<std::vector<Command>> commands(9);
 
-    std::vector<std::vector<Command>> commands(9);
+        commands[0] = loadCommands("commands_a1.txt");
+        commands[1] = loadCommands("commands_a2.txt");
+        commands[2] = loadCommands("commands_a3.txt");
+        commands[3] = loadCommands("commands_b1.txt");
+        commands[4] = loadCommands("commands_b2.txt");
+        commands[5] = loadCommands("commands_b3.txt");
+        commands[6] = loadCommands("commands_c1.txt");
+        commands[7] = loadCommands("commands_c2.txt");
+        commands[8] = loadCommands("commands_c3.txt");
 
-    commands[0] = loadCommands("commands_a1.txt");
-    commands[1] = loadCommands("commands_a2.txt");
-    commands[2] = loadCommands("commands_a3.txt");
-    commands[3] = loadCommands("commands_b1.txt");
-    commands[4] = loadCommands("commands_b2.txt");
-    commands[5] = loadCommands("commands_b3.txt");
-    commands[6] = loadCommands("commands_c1.txt");
-    commands[7] = loadCommands("commands_c2.txt");
-    commands[8] = loadCommands("commands_c3.txt");
+        ThreadSafe sharedStructure;
 
-    ThreadSafe sharedStructure;
-
-    std::cout << "\nScenario  A:" << std::endl;
-    runScenarioTests(sharedStructure, commands, 0);
-    std::cout << "\nScenario  B:" << std::endl;
-    runScenarioTests(sharedStructure, commands, 3);
-    std::cout << "\nScenario  C:" << std::endl;
-    runScenarioTests(sharedStructure, commands, 6);
+        std::cout << "\nScenario  A:" << std::endl;
+        runScenarioTests(sharedStructure, commands, 0);
+        std::cout << "\nScenario  B:" << std::endl;
+        runScenarioTests(sharedStructure, commands, 3);
+        std::cout << "\nScenario  C:" << std::endl;
+        runScenarioTests(sharedStructure, commands, 6);
+    } catch (const std::runtime_error& e) {
+        std::cout << e.what() << std::endl;
+        return 0;
+    }
+    return 0;
 }
