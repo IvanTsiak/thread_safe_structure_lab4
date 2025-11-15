@@ -25,10 +25,8 @@ void runScenarioTests(ThreadSafe& structure,
 
     start = std::chrono::high_resolution_clock::now();
     {
-        std::thread t1(executeCommands, std::ref(structure), std::cref(allCommands[baseIndex]));
-        std::thread t2(executeCommands, std::ref(structure), std::cref(allCommands[baseIndex + 1]));
-        t1.join();
-        t2.join();
+        std::jthread t1(executeCommands, std::ref(structure), std::cref(allCommands[baseIndex]));
+        std::jthread t2(executeCommands, std::ref(structure), std::cref(allCommands[baseIndex + 1]));
     }
     end = std::chrono::high_resolution_clock::now();
     duration = end - start;
@@ -36,12 +34,9 @@ void runScenarioTests(ThreadSafe& structure,
 
     start = std::chrono::high_resolution_clock::now();
     {
-        std::thread t1(executeCommands, std::ref(structure), std::cref(allCommands[baseIndex]));
-        std::thread t2(executeCommands, std::ref(structure), std::cref(allCommands[baseIndex + 1]));
-        std::thread t3(executeCommands, std::ref(structure), std::cref(allCommands[baseIndex + 2]));
-        t1.join();
-        t2.join();
-        t3.join();
+        std::jthread t1(executeCommands, std::ref(structure), std::cref(allCommands[baseIndex]));
+        std::jthread t2(executeCommands, std::ref(structure), std::cref(allCommands[baseIndex + 1]));
+        std::jthread t3(executeCommands, std::ref(structure), std::cref(allCommands[baseIndex + 2]));
     }
     end = std::chrono::high_resolution_clock::now();
     duration = end - start;

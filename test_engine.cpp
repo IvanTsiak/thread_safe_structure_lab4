@@ -2,11 +2,15 @@
 
 #include <fstream>
 #include <sstream>
+#include <stdexcept>
 
 std::vector<Command> loadCommands(const std::string& filename) {
     std::vector<Command> commands;
     std::ifstream file(filename);
-    //Тут також треба не забути перевірку відкриття додати
+
+    if (!file.is_open()) {
+        throw std::runtime_error("Error: Could not open command file: " + filename);
+    }
     
     std::string line;
     while (std::getline(file, line)) {
